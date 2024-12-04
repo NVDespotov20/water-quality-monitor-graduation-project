@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowGuardMonitoring.DAL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowGuardMonitoring.BLL", "FlowGuardMonitoring.BLL\FlowGuardMonitoring.BLL.csproj", "{FB2A0E08-80DD-4775-8E0F-9248C237E997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowGuardMonitoring.WebHost", "FlowGuardMonitoring.WebHost\FlowGuardMonitoring.WebHost.csproj", "{C8EA3D49-4021-4EE9-8295-431D29F4DC1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{FB2A0E08-80DD-4775-8E0F-9248C237E997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB2A0E08-80DD-4775-8E0F-9248C237E997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB2A0E08-80DD-4775-8E0F-9248C237E997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8EA3D49-4021-4EE9-8295-431D29F4DC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8EA3D49-4021-4EE9-8295-431D29F4DC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8EA3D49-4021-4EE9-8295-431D29F4DC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8EA3D49-4021-4EE9-8295-431D29F4DC1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
