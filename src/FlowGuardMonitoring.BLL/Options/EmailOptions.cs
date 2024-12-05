@@ -1,10 +1,10 @@
-﻿namespace FlowGuardMonitoring.BLL.Settings;
+﻿namespace FlowGuardMonitoring.BLL.Options;
 
 public class EmailOptions
 {
-    public string SmtpServer { get; set; }
-    public int Port { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public bool EnableSsl { get; set; }
+    public required  string SmtpServer { get; set; }
+    public required  int Port { get; set; }
+    public required  string Username { get; set; }
+    public required  string Password { get; set; }
+    public required  bool EnableSsl { get; set; }
 }

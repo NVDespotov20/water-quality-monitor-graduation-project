@@ -1,28 +1,31 @@
-﻿using FlowGuardMonitoring.BLL.Models;
+﻿using Essentials.Results;
+using FlowGuardMonitoring.BLL.Models;
 using Microsoft.AspNetCore.Mvc;
 using FlowGuardMonitoring.BLL.Services;
-using FlowGuardMonitoring.BLL.Settings;
+using FlowGuardMonitoring.WebHost.Models;
 
 namespace FlowGuardMonitoring.WebHost.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/email")]
 public class EmailController : Controller
 {
-    EmailSenderService _emailSenderService;
+    private readonly EmailSenderService _emailSenderService;
 
-    EmailController(EmailSenderService emailSenderService)
+    public EmailController(EmailSenderService emailSenderService)
     {
         _emailSenderService = emailSenderService;
     }
     
-    [HttpGet("")]
-    public void Get([FromQuery]string email)
+    [HttpGet("send")]
+    public async Task<IActionResult> Get()
     {
-        _emailSenderService.SendEmailAsync(new EmailModel()
+        return await _emailSenderService.SendEmailAsync(new EmailModel()
         {
-            Recipient = email,
+            Recipient = "ni_des@outlook.com",
             Subject = "Test",
             Body = "Hello world!"
-        });
+        }) == StandardResult.SuccessfulResult()
+            ? View("../Home/Index") :
+            View("Error", new ErrorViewModel());
     }
 }

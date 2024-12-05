@@ -4,38 +4,21 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
     </PropertyGroup>
 
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="Views\Charts\a.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\b.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\Charts.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\Partials\_ChartsScript.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\Partials\_SparklineScript.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Charts\Sparkline.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\Avatars.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\buttons.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\font-awesome-icons.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\gridsystem.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\notifications.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\panels.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\simple-line-icons.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\sweetalert.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Components\typography.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Forms\forms.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Maps\googlemaps.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Maps\jsvectormap.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\tables\datatables.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\tables\tables.cshtml" />
-    </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\FlowGuardMonitoring.BLL\FlowGuardMonitoring.BLL.csproj" />
+      <ProjectReference Include="..\FlowGuardMonitoring.DAL\FlowGuardMonitoring.DAL.csproj" />
     </ItemGroup>
 
 </Project>
